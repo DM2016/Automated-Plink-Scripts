@@ -1,0 +1,10 @@
+#Automated QC steps
+
+#!/usr/bin/python
+
+#replace directories as needed
+
+import os
+os.system('/home/path to dir/plink --bfile /home/path to dir/plink_datafiles--maf 0.01 --geno 0.05 --mind 0.05 --hwe 0.001 --make-bed --out /home/path to dir/plink_datafiles_Cleaned')
+os.system('/home/path to dir/plink --bfile /home/path to dir/plink_datafiles_Cleaned  --indep-pairwise 100 5 0.2 --make-bed --out /home/path to dir/plink_datafiles_Cleaned_Pruned')
+os.system('/home/path to dir/plink --bfile /home/path to dir/plink_datafiles_Cleaned_Pruned  --pca 10 --out /home/path to dir/plink_datafiles_Cleaned_Pruned_pcafiles')
