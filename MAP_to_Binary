@@ -1,0 +1,11 @@
+##python version (Beta Version)
+
+#!usr/env/python
+
+import os  
+
+for i in range(1, 24):
+
+       os.system('/home/path to dir/plink --file /home/path to chromosome files/chr(i) --chr (i) --make-bed --out /home/path to chromosome files/chr(i)')
+
+exit   
